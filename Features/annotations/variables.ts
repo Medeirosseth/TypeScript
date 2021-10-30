@@ -59,3 +59,14 @@ for (let i = 0; i <words.length; i ++) {
     foundWord = true
   }
 }
+
+
+//3) Variables whose type connot be inferred correctly
+let numbers = [-10, -1, 12]
+let numbersAboveZero: boolean | number = false;
+
+for (let i = 0; i <numbers.length; i++ ) {
+  if (numbers[i] > 0) {
+    numbersAboveZero = true
+  } 
+}
