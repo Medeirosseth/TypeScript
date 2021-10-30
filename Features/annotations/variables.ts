@@ -38,3 +38,24 @@ const logNumber: (i: number) => void = (i: number) => {
     console.log(i)
 };
 
+// false => JSON.parse() returns "any" type
+
+// type inference only works on one line of code 
+
+
+// When to use annotations 
+// 10 Function that returns the 'any' type
+const json = '{"x": 10, "y": 20}'
+const coordinates: {"x": number; "y": number} = JSON.parse(json)
+
+
+// 2) When we decalre a variable on one line 
+// and initalize it later 
+let words = ['red', 'green', 'blue'];
+let foundWord = false
+
+for (let i = 0; i <words.length; i ++) {
+  if(words[i] === 'green'){
+    foundWord = true
+  }
+}
